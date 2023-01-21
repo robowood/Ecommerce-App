@@ -5,14 +5,16 @@ import Store from './Components/Pages/Stor/Store';
 import About from './Components/Pages/About/About';
 import Header from './Components/Layouts/Header';
 import ContextProvider from './Store/ContextProvider';
-import Cart from './Components/UI/Cart/Cart';
+
 
 function App() {
 
   
   return (
     <div>
-      <ContextProvider>  <NavBar />
+      
+      <ContextProvider>
+     <NavBar />
   <Header/>
 
     <Routes>

@@ -14,8 +14,9 @@ const NavBar = () => {
     //     ctx.logout();
     // }
 
-    const numberOfItems=ctx.items.reduce((curr,item)=>Number(curr)+ Number(item.quantity)
-    ,0);
+     const numberOfItems=ctx.items.length;
+    //  ((curr,item)=>(curr)+ Number(item.quantity)
+    // ,0);
 
   return (
    <Fragment>

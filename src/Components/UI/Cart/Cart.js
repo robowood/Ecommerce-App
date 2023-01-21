@@ -83,7 +83,7 @@ console.log(id);
             <div className="cart-item-div" key={item.id}>
               <div className="cart-item-first">
                 <div className="cart-item-first-img">
-                  <img src={item.img} />
+                  <img src={item.imageUrl} />
                 </div>
                 <div className="cart-item-first-title">{item.title}</div>
               </div>

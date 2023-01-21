@@ -1,38 +1,35 @@
-
-    .main-div{
-        width: 100vw;
-        height: auto; 
-        
-        
-  }
-    
+.main-div{
+    width: 80vw;
+    height: auto;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .tours-list{
-    
-    display:flex;
-    
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    
-     /* padding-right: 50px; */
-    margin-left: 70px;
-    margin-right: 10px; 
     width: 100%;
-    }
-    .line-main{
+    margin-bottom: 10px;
+    margin-left: 30%;
+
+}
+.line-main{
      
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .line{
-        width: 100vw;
-        height: 1px;
-        background: #000;
-        justify-content: center;
-        margin-bottom: 8px;
-        margin-right: 170px;
-        margin-left: 70px;
-    }
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 80vw;
+    height: 1px;
+    background: #000;
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-left: 25%;
+    margin-right: 20%;
+}

@@ -1,0 +1,43 @@
+ *{
+    box-sizing: border-box;
+}
+.about-main-div{
+    width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.about-heading{
+ font-size: 50px;
+ font-weight: bold;
+ margin-top: 15px;
+ margin-bottom: 25px;
+ align-items: center;
+} 
+
+ .about-sub-content{
+width: 60%;
+display: flex;
+display: block;
+ 
+ } 
+
+.about-img{
+    margin: 20px;
+    float: left;
+
+} 
+
+ .about-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+} 
+
+ .about-para p{ 
+  font-size: 12px;
+  color: rgb(240, 124, 124);
+} 
+

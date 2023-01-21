@@ -1,15 +1,11 @@
-.header-main-div{
-    width: 100vw;
-    height: 40vh;
-display: flex;
-align-items: center;
-justify-content: center;
-background: #777;
+.main{
+    background-color: aliceblue;
+    border: 20px solid aliceblue;
 }
-
-.header-sub-div{
-color: white;
-font-size: 50px;
-font-weight: bolder;
-margin-top: 20px;
+.heading{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
 }

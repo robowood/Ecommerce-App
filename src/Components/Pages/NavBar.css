@@ -1,0 +1,39 @@
+.mainHeader{
+    background-color: black;
+    border: 10px solid black
+}
+
+.navButtons{
+    text-align: center;
+    margin-left: 50px;
+    }
+
+.navButtonsNavigation{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 50px;
+    font-size: larger;
+    background-color: black;
+    color:white
+    
+}
+.cartButton{
+    float: right;
+    font-size: larger;
+    background-color: black;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    color:white;
+    
+    
+    
+}
+
+.cartCount{
+    background-color: skyblue;
+    border: 10px solid none;
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;  
+}

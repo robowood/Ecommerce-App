@@ -1,0 +1,57 @@
+.unOrderedList{
+    text-align: center;
+    margin-right: 250px; 
+    margin-left: 250px; 
+    height: 100vh;
+    margin-bottom: 100px;
+
+}
+
+.mainList {
+    width: 50%;
+    float: left;
+    color: aquamarine;
+    
+}
+
+.itemTitle{
+    list-style-type: none;
+}
+.music{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+    font-weight:lighter;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.itemTitle{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.itemPrice{
+
+    font-size: 20px;
+    float: left;
+    margin-left: 50px;
+    padding-top: 5px;
+    font-weight: bold;
+
+
+
+}
+.addToCart{
+    float: right;
+    margin-right: 50px;
+    color: red;
+    border: 1px solid skyblue;
+    background-color: skyblue;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+
+}

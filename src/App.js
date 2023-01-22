@@ -7,6 +7,7 @@ import Header from './Components/Layouts/Header';
 import ContextProvider from './Store/ContextProvider';
 import Contact from './Components/Pages/ContactUs/Contact';
 import SingleProduct from './Components/Pages/SingleProduct/SingleProduct';
+import Authentication from './Components/Pages/Authentication/Authentication';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/singleproduct/:id' element={<SingleProduct />} />
+      <Route path='/login' element={<Authentication />} />
+
 
 
      {/* <Route path='/cart' element={<Cart />} />   */}

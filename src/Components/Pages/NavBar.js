@@ -1,4 +1,6 @@
 import React, { Fragment,useContext } from 'react'
+
+
 import { NavLink } from 'react-router-dom'
 import Cart from '../UI/Cart/Cart'
 import cartContext from '../../Store/Context'
@@ -10,9 +12,11 @@ const NavBar = () => {
 const {items}=ctx;
    
 
-    // const logoutHandler=()=>{
-    //     ctx.logout();
-    // }
+const logoutHandler=()=>{
+    console.log(ctx);
+    ctx.logout();
+    console.log(ctx);
+}
 
      const numberOfItems=items.length;
     //  ((curr,item)=>(curr)+ Number(item.quantity)
@@ -26,12 +30,17 @@ const {items}=ctx;
         <NavLink className='nav-sub' to='/store'>Store</NavLink>
         <NavLink className='nav-sub' to='/about'>About</NavLink>
         <NavLink className='nav-sub' to='/contact'>Contact</NavLink>
-        <NavLink className='nav-sub' to='/login'>
-            <button type="button" className="btn btn-primary login-btn btn-lg">Login</button>
+        {!ctx.isLoggedIn && <NavLink className='nav-sub-com' to='/login'>
+            <button type="button" className="btn btn-primary login-btn">Login</button>
         </NavLink>
-        <NavLink to='/cart'>
+        }
+        {ctx.isLoggedIn && <NavLink className='nav-sub-com' to='/login'>
+            <button type="button" className="btn btn-primary login-btn" onClick={logoutHandler}>Logout</button>
+        </NavLink>}
+
+        {/* <NavLink to='/cart'>
             <button type="button" className="btn btn-primary cart-btn btn-lg"><Cart /></button>
-        </NavLink>
+        </NavLink> */}
         <p className='cart-item-no'>  {numberOfItems}</p>
         </div>
     </div>

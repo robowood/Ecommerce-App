@@ -1,9 +1,10 @@
 import React, { useContext, useRef, useState } from 'react'
-import { useHistory, useNavigate } from 'react-router-dom';
+import {  useNavigate,useHistory } from 'react-router-dom';
 import cartContext from '../../../Store/Context';
 import './Authentication.css'
 
 const Authentication = () => {
+
 
     const [isLogin, setIsLogin] = useState(true);
   const [sendingReq,setSendingReq]=useState(false);
@@ -44,7 +45,7 @@ const history = useNavigate();
             let data=res.json();
             (data).then((resp)=>{
                 ctx.login(resp.idToken);
-                history('/store')
+                history('/profile')
                 console.log(resp.idToken);
             })
         }else{

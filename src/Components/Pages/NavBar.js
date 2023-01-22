@@ -1,13 +1,14 @@
-import React, { Fragment,useContext } from 'react'
+import React, { Fragment,useContext, } from 'react'
 
 
-import { NavLink } from 'react-router-dom'
+import { NavLink ,useNavigate} from 'react-router-dom'
 import Cart from '../UI/Cart/Cart'
 import cartContext from '../../Store/Context'
 import './NavBar.css'
 
 
 const NavBar = () => {
+    const navigate=useNavigate();
     const ctx=useContext(cartContext);
 const {items}=ctx;
    
@@ -15,7 +16,9 @@ const {items}=ctx;
 const logoutHandler=()=>{
     console.log(ctx);
     ctx.logout();
+    
     console.log(ctx);
+    navigate('/login');
 }
 
      const numberOfItems=items.length;
@@ -32,15 +35,18 @@ const logoutHandler=()=>{
         <NavLink className='nav-sub' to='/contact'>Contact</NavLink>
         {!ctx.isLoggedIn && <NavLink className='nav-sub-com' to='/login'>
             <button type="button" className="btn btn-primary login-btn">Login</button>
+        
         </NavLink>
         }
+                <NavLink className='nav-sub' to='/profile'>Profile</NavLink>
+
         {ctx.isLoggedIn && <NavLink className='nav-sub-com' to='/login'>
-            <button type="button" className="btn btn-primary login-btn" onClick={logoutHandler}>Logout</button>
+            <button type="button" className="btn btn-primary login-btn" onClick={logoutHandler} >Logout</button>
         </NavLink>}
 
-        {/* <NavLink to='/cart'>
+         <NavLink to='/cart'>
             <button type="button" className="btn btn-primary cart-btn btn-lg"><Cart /></button>
-        </NavLink> */}
+        </NavLink> 
         <p className='cart-item-no'>  {numberOfItems}</p>
         </div>
     </div>

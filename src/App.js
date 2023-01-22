@@ -6,6 +6,7 @@ import About from './Components/Pages/About/About';
 import Header from './Components/Layouts/Header';
 import ContextProvider from './Store/ContextProvider';
 import Contact from './Components/Pages/ContactUs/Contact';
+import SingleProduct from './Components/Pages/SingleProduct/SingleProduct';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       <Route path='/store' element={<Store />} />
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/singleproduct/:id' element={<SingleProduct />} />
+
 
      {/* <Route path='/cart' element={<Cart />} />   */}
 

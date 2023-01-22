@@ -1,11 +1,22 @@
 import React, { Fragment } from 'react'
 import './About.css'
+import { useNavigate } from 'react-router-dom';
 
 
 const About = () => {
+  const navigate=useNavigate();
+  const goBack=()=>{
+    navigate(-1);
+   }
+  
   return (
     <Fragment>
+      
        <div className='about-main-div'>
+        <div>
+        <button className='back-button' onClick={goBack}>goBack</button>
+
+        </div>
         <div className='about-heading'>
         About
         </div>

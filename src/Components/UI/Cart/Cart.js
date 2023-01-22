@@ -71,7 +71,7 @@ console.log(id);
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="cart-modal-title">Cart</Modal.Title>
+          <div className="cart-modal-title">Cart</div>
         </Modal.Header>
         <Modal.Body>
           <div className="cart-main-div">

@@ -1,0 +1,69 @@
+.single-main{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.icon{
+    width:50px;
+    background-color: blanchedalmond;
+    size: 50px;
+    
+}
+.single-left{
+width: 30%;
+align-items: center;
+justify-content: center;
+margin: 20px;
+padding: 10px;
+}
+
+.single-left img {
+    width: 80%;
+    border-radius: 10px;
+    border:1px solid black;
+}
+
+.single-right{
+width: 70%;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-right: 20px;
+border:2px solid red;
+
+}
+
+.single-title{
+
+color:aqua;
+font-weight: bold;
+
+}
+
+.single-mrp{
+    font-weight: bold;
+
+
+}
+
+.single-price{
+    font-weight: bold;
+
+
+}
+
+.single-desc{
+font-weight: bold;
+
+}
+ .back-button{
+    display: flex;
+    color:blue;
+    align-items: right;
+    text-align:right;
+    margin-left: 500px;
+    margin-top: 5px;
+
+ }

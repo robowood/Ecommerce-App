@@ -7,14 +7,14 @@ import './NavBar.css'
 
 const NavBar = () => {
     const ctx=useContext(cartContext);
-
+const {items}=ctx;
    
 
     // const logoutHandler=()=>{
     //     ctx.logout();
     // }
 
-     const numberOfItems=ctx.items.length;
+     const numberOfItems=items.length;
     //  ((curr,item)=>(curr)+ Number(item.quantity)
     // ,0);
 
@@ -27,10 +27,10 @@ const NavBar = () => {
         <NavLink className='nav-sub' to='/about'>About</NavLink>
         <NavLink className='nav-sub' to='/contact'>Contact</NavLink>
         <NavLink className='nav-sub' to='/login'>
-            <button type="button" className="btn btn-primary login-btn btn-sm">Login</button>
+            <button type="button" className="btn btn-primary login-btn btn-lg">Login</button>
         </NavLink>
         <NavLink to='/cart'>
-            <button type="button" className="btn btn-primary cart-btn btn-sm"><Cart /></button>
+            <button type="button" className="btn btn-primary cart-btn btn-lg"><Cart /></button>
         </NavLink>
         <p className='cart-item-no'>  {numberOfItems}</p>
         </div>

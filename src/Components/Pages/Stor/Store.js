@@ -4,6 +4,8 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { NavLink } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom';
 import cartContext from '../../../Store/Context';
 import './Store.css'
 
@@ -12,7 +14,7 @@ const Store = () => {
     const productsArr = [
 
         {
-
+         id:'b1',
         title: 'Colors',
 
         price: 100,
@@ -22,7 +24,7 @@ const Store = () => {
         },
 
         {
-
+        id:'b2',
         title: 'Black and white Colors',
 
         price: 50,
@@ -33,6 +35,9 @@ const Store = () => {
 
         {
 
+
+          id:'b3',
+
         title: 'Yellow and Black Colors',
 
         price: 70,
@@ -42,6 +47,7 @@ const Store = () => {
         },
 
         {
+          id:'b4',
 
         title: 'Blue Color',
 
@@ -74,20 +80,26 @@ const Store = () => {
 
 
             <Row xs={1} md={2} className="g-4">
-      {productsArr.map((item, idx) => (
-        <Col className='store-cards-row'>
+      {productsArr.map((item, id) => (
+        <Col className='store-cards-row' key={item.id} id={item.id}>
 
 
         <Card.Title className='store-card-title'>{item.title}</Card.Title>
           <Card>
+            
+
+            <NavLink to ={`/singleproduct/${item.id}`}>
+
             <Card.Img variant="top" src={item.imageUrl} />
+            </NavLink>
+
             <Card.Body>
               {/* <Card.Title>Card title</Card.Title> */}
               <Card.Text className='store-card-description'>
                <div>${item.price}</div>
                <div>
 
-               <Button variant="primary" onClick={addToCartHandler.bind(null,item.title,item.price,item.imageUrl, idx)}>ADD TO CART</Button>
+               <Button variant="primary" onClick={addToCartHandler.bind(null,item.title,item.price,item.imageUrl, id)}>ADD TO CART</Button>
 
                </div>
               </Card.Text>

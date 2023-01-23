@@ -9,10 +9,13 @@ import Contact from './Components/Pages/ContactUs/Contact';
 import SingleProduct from './Components/Pages/SingleProduct/SingleProduct';
 import Authentication from './Components/Pages/Authentication/Authentication';
 import UserProfile from './Components/Profile/UserProfile';
+import cartContext from './Store/Context';
+import { useContext } from 'react';
 
 
 function App() {
 
+  const ctx=useContext(cartContext);
   
   return (
     <div>
@@ -23,12 +26,14 @@ function App() {
 
     <Routes>
       <Route path="/" element={ <Home/> } />
-      <Route path='/store' element={<Store />} />
       <Route path='/about' element={<About />} />
-      <Route path='/contact' element={<Contact />} />
       <Route path='/singleproduct/:id' element={<SingleProduct />} />
-      <Route path='/login' element={<Authentication />} />
       <Route path='/profile' element={<UserProfile />} />
+      <Route path='/store' element={ctx.isLoggedIn ? <Store /> :<Authentication /> } />
+      <Route path='/login' element={!ctx.isLoggedIn ? <Authentication /> : <Store />} />
+      <Route path='/contact' element={ctx.isLoggedIn ? <Contact /> : <Authentication />} />
+      <Route path='*' element={<Home />} />
+
 
 
 

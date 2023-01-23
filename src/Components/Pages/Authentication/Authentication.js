@@ -45,8 +45,9 @@ const history = useNavigate();
             let data=res.json();
             (data).then((resp)=>{
                 ctx.login(resp.idToken);
-                history('/profile')
+                history('/store')
                 console.log(resp.idToken);
+                localStorage.setItem('data',enteredEmail);
             })
         }else{
             const data =res.json();

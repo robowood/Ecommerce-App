@@ -45,9 +45,11 @@ const history = useNavigate();
             let data=res.json();
             (data).then((resp)=>{
                 ctx.login(resp.idToken);
-                history('/store')
-                console.log(resp.idToken);
-                localStorage.setItem('data',enteredEmail);
+                ctx.userEmailTrack(enteredEmail.replace(/[@.]/g,''));
+                history('/store');
+                
+                console.log('EmailOfUser',ctx.emailOfUser);
+
             })
         }else{
             const data =res.json();

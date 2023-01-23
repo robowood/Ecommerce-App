@@ -1,4 +1,4 @@
-import React, { Fragment,useContext, } from 'react'
+import React, { Fragment,useContext,useEffect } from 'react'
 
 
 import { NavLink ,useNavigate} from 'react-router-dom'
@@ -21,9 +21,14 @@ const logoutHandler=()=>{
     
     console.log(ctx);
     navigate('/login');
-}
+}   
+ let NoItem;
+NoItem=ctx.items.reduce((curr,item)=>curr+item.quantity
+,0);
 
-     const numberOfItems=items.length;
+// const totalAmount=ctx.items.reduce((curr,item)=>curr+item.quantity,0)
+
+    //  const numberOfItems=items.length;
     //  ((curr,item)=>(curr)+ Number(item.quantity)
     // ,0);
 
@@ -47,10 +52,12 @@ const logoutHandler=()=>{
             <button type="button" className="btn btn-primary login-btn" onClick={logoutHandler} >Logout</button>
         </NavLink>}
 
-         <NavLink to='/cart'>
+         {/* <NavLink to='/cart'>
             <button type="button" className="btn btn-primary cart-btn btn-lg"><Cart /></button>
-        </NavLink> 
-        <p className='cart-item-no'>  {numberOfItems}</p>
+        </NavLink>  */}
+         {ctx.isLoggedIn &&  <Cart />}
+
+        <p className='cart-item-no'>  {NoItem}</p>
         </div>
     </div>
    </Fragment>

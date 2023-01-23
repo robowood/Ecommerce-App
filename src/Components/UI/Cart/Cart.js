@@ -19,7 +19,7 @@ function Cart() {
       imageUrl:
         "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
 
-      quantity: 2,
+      quantity: 1,
     },
 
     {
@@ -30,7 +30,7 @@ function Cart() {
       imageUrl:
         "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
 
-      quantity: 3,
+      quantity: 1,
     },
 
     {
@@ -60,7 +60,7 @@ console.log(id);
   
   
   
-  const totalAmount=ctx.items.reduce((curr,item)=>curr+item.price,0)
+   const totalAmount=ctx.items.reduce((curr,item)=>curr+item.price,0)
 
  
   return (
@@ -83,7 +83,7 @@ console.log(id);
             <div className="cart-item-div" key={item.id}>
               <div className="cart-item-first">
                 <div className="cart-item-first-img">
-                  <img src={item.imageUrl} />
+                  <img src={item.img} />
                 </div>
                 <div className="cart-item-first-title">{item.title}</div>
               </div>
@@ -94,6 +94,7 @@ console.log(id);
                   Remove
                 </Button>
               </div>
+
             </div>
           ))};
         </Modal.Body>

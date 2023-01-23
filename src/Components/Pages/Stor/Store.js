@@ -1,5 +1,5 @@
 
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext,useEffect } from 'react'
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -64,9 +64,10 @@ const Store = () => {
            price:price,
            imageUrl:img,
            id:i,
-            qty:2
+            qty:1
           })
-          console.log('ctx',ctx,title,price,i);
+          // console.log('ctx',ctx,title,price,i);
+          console.log(ctx.emailOfUser)
         };
 
 
